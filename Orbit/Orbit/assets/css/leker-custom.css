@@ -393,6 +393,32 @@ p{text-align:justify!important;text-justify:inter-word}
         margin: 5px 0 0;
     }
 }
-.site-header {
-    background: red !important;
-    
+.site-header .nav-order {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-left: 8px;
+    padding: 12px 19px;
+    min-height: 46px;
+    border-radius: 30px;
+    background: #e47e5b;
+    color: #ffffff !important;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(228, 126, 91, 0.13);
+    transition: all 0.25s ease;
+}
+
+.site-header .nav-order i {
+    font-size: 14px;
+}
+
+.site-header .nav-order:hover {
+    background: #d36e4e;
+    transform: translateY(-2px);
+}
+
