@@ -187,3 +187,214 @@ p{text-align:justify!important;text-justify:inter-word}
         color: #fff;
     }
 }
+/* =========================================
+   NAVBAR - LEKER KELEKERAN
+========================================= */
+
+.site-header {
+    background: #fffaf2 !important;
+    min-height: 100px;
+    padding: 12px 0;
+    box-shadow: 0 2px 15px rgba(73, 85, 70, 0.06);
+    border-bottom: 1px solid rgba(91, 153, 135, 0.10);
+    z-index: 999;
+}
+
+.site-header .navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* LOGO DAN IDENTITAS */
+.site-header .brand {
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.site-header .brand-logo {
+    display: block;
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.site-header .brand-caption {
+    display: flex;
+    flex-direction: column;
+    color: #3f7469;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.site-header .brand-caption small {
+    margin-top: 4px;
+    color: #9a9a82;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+/* MENU NAVIGASI */
+.site-header .navmenu {
+    display: flex;
+    align-items: center;
+}
+
+.site-header .navmenu ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 7px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-header .navmenu ul li {
+    margin: 0;
+    padding: 0;
+}
+
+.site-header .nav-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 15px;
+    border-radius: 30px;
+    color: #52675e;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.site-header .nav-link:hover,
+.site-header .nav-link.active {
+    background: #e7f3ee;
+    color: #3d8b7b;
+}
+
+/* TOMBOL PESAN */
+.site-header .nav-order {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 7px;
+    padding: 17px 24px;
+    border-radius: 40px;
+    background: #e47e5b;
+    color: #ffffff !important;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 6px 15px rgba(228, 126, 91, 0.16);
+    transition: all 0.25s ease;
+}
+
+.site-header .nav-order:hover {
+    background: #cf6949;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(228, 126, 91, 0.23);
+}
+
+.site-header .nav-order i {
+    font-size: 16px;
+}
+
+/* RESPONSIVE TABLET */
+@media (max-width: 1199px) {
+    .site-header .navbar {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .site-header .brand-logo {
+        width: 55px;
+        height: 55px;
+    }
+
+    .site-header .brand-caption {
+        font-size: 15px;
+    }
+
+    .site-header .navmenu ul {
+        gap: 2px;
+    }
+
+    .site-header .nav-link {
+        padding: 10px 11px;
+        font-size: 14px;
+    }
+
+    .site-header .nav-order {
+        padding: 14px 18px;
+    }
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 991px) {
+    .site-header {
+        min-height: 80px;
+        padding: 10px 0;
+    }
+
+    .site-header .brand-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .site-header .mobile-nav-toggle {
+        color: #4b8d7d;
+        font-size: 29px;
+        cursor: pointer;
+    }
+
+    .site-header .navmenu ul {
+        display: none;
+    }
+
+    .site-header .navmenu.mobile-nav-active ul {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        position: absolute;
+        top: 80px;
+        left: 15px;
+        right: 15px;
+        padding: 18px;
+        gap: 5px;
+        background: #fffaf2;
+        border: 1px solid #e9eee7;
+        border-radius: 18px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .site-header .navmenu ul li,
+    .site-header .navmenu .nav-link,
+    .site-header .navmenu .nav-order {
+        width: 100%;
+    }
+
+    .site-header .nav-link {
+        justify-content: flex-start;
+    }
+
+    .site-header .nav-order {
+        margin: 5px 0 0;
+    }
+}
+
