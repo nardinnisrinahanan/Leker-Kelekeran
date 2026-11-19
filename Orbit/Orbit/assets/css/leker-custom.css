@@ -188,14 +188,12 @@ p{text-align:justify!important;text-justify:inter-word}
     }
 }
 
+
 /* =========================================
    HEADER / NAVBAR
 ========================================= */
 
 .site-header {
-    position: sticky;
-    top: 0;
-    width: 100%;
     min-height: 88px;
     padding: 10px 0;
     background: #fffaf2 !important;
@@ -205,22 +203,23 @@ p{text-align:justify!important;text-justify:inter-word}
 }
 
 .site-header .navbar {
-    width: 100%;
-    max-width: 1240px;
+    max-width: 1340px;
     margin: 0 auto;
     padding: 0 24px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 0;
 }
 
 /* Brand / Logo */
 
 .site-header .brand {
-    display: flex;
+    display: flex !important;
     align-items: center;
     gap: 12px;
     flex-shrink: 0;
+    margin: 0;
     text-decoration: none;
 }
 
@@ -254,13 +253,13 @@ p{text-align:justify!important;text-justify:inter-word}
 .site-header .navmenu {
     display: flex;
     align-items: center;
+    margin-left: auto;
 }
 
 .site-header .navmenu ul {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 5px;
+    gap: 3px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -275,14 +274,14 @@ p{text-align:justify!important;text-justify:inter-word}
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 11px 16px;
+    padding: 11px 14px;
     border-radius: 30px;
     color: #63736a;
     font-family: 'DM Sans', sans-serif;
     font-size: 14px;
     font-weight: 500;
     text-decoration: none;
-    transition: background 0.25s ease, color 0.25s ease;
+    transition: all 0.25s ease;
 }
 
 .site-header .nav-link:hover,
@@ -298,11 +297,11 @@ p{text-align:justify!important;text-justify:inter-word}
     align-items: center;
     justify-content: center;
     gap: 9px;
-    margin-left: 12px;
+    margin-left: 5px;
     padding: 14px 21px;
     border-radius: 35px;
     background: #e47e5b;
-    color: #ffffff !important;
+    color: #fff !important;
     font-family: 'DM Sans', sans-serif;
     font-size: 14px;
     font-weight: 600;
@@ -313,20 +312,18 @@ p{text-align:justify!important;text-justify:inter-word}
 
 .site-header .nav-order:hover {
     background: #d36e4e;
-    color: #ffffff !important;
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(228, 126, 91, 0.22);
 }
 
 .site-header .nav-order i {
     font-size: 15px;
 }
 
-/* Responsive - Tablet */
+/* Responsive Navbar */
 
 @media (max-width: 1199px) {
     .site-header .navbar {
-        padding: 0 20px;
+        padding: 0 18px;
     }
 
     .site-header .brand-logo {
@@ -338,23 +335,17 @@ p{text-align:justify!important;text-justify:inter-word}
         font-size: 15px;
     }
 
-    .site-header .navmenu ul {
-        gap: 2px;
-    }
-
     .site-header .nav-link {
-        padding: 10px 11px;
+        padding: 10px 10px;
         font-size: 13px;
     }
 
     .site-header .nav-order {
-        margin-left: 5px;
-        padding: 12px 16px;
-        font-size: 13px;
+        padding: 12px 15px;
     }
 }
 
-/* Responsive - Mobile */
+/* Mobile Navbar */
 
 @media (max-width: 991px) {
     .site-header {
@@ -362,13 +353,7 @@ p{text-align:justify!important;text-justify:inter-word}
         padding: 10px 0;
     }
 
-    .site-header .brand-logo {
-        width: 48px;
-        height: 48px;
-    }
-
     .site-header .mobile-nav-toggle {
-        display: block;
         color: #467f71;
         font-size: 28px;
         cursor: pointer;
@@ -401,7 +386,6 @@ p{text-align:justify!important;text-justify:inter-word}
     .site-header .navmenu .nav-link {
         width: 100%;
         justify-content: flex-start;
-        padding: 12px 15px;
     }
 
     .site-header .navmenu .nav-order {
@@ -409,5 +393,3 @@ p{text-align:justify!important;text-justify:inter-word}
         margin: 5px 0 0;
     }
 }
-
-
